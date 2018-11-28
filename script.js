@@ -44,5 +44,9 @@ $(function () {
         const email = event.target.value;
         contactForm.toggleClass("invalid", !validateEmail(email));
     });
+    $(".link-to-slide").on("click", function() {
+        currentPage = $(this).data("slide") - 1;
+        goDown();
+    });
 
 });
